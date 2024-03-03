@@ -45,7 +45,7 @@ def push_result():
     dj['username'] = dj['username'].replace(to_replace='[234567890{kirill}]', value = '', regex=True)   # Исключаем буквы киррилицы и все цифры кроме '1' 
 
 	table_path = 'df'
-	dj.to_sql(name=table_path, con=conn, schema='_____', if_exists='replace', index= False)
+	dj.to_sql(name=table_path, con=conn, schema='schema', if_exists='replace', index= False)
 
 
 # ДАГ        
